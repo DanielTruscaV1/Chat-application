@@ -14,7 +14,7 @@ import {ConversationsProvider} from '../contexts/ConversationsProvider'
 function App() {
   const [id, setId] = useLocalStorage('id')
   const dashboard = (
-    <ContactsProvider>
+    <ContactsProvider id={id}>
       <ConversationsProvider>
       <Dashboard id={id}/>
       </ConversationsProvider>
